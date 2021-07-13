@@ -1,0 +1,198 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://scenes/UserInterface/ExitButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/UserInterface/Title.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/UserInterface/RestartButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/UserInterface/PauseUI.gd" type="Script" id=5]
+[ext_resource path="res://assets/Fonts/m6x11.tres" type="DynamicFont" id=6]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=5]
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+[sub_resource type="StyleBoxEmpty" id=7]
+
+[sub_resource type="StyleBoxEmpty" id=8]
+
+[sub_resource type="StyleBoxEmpty" id=9]
+
+[sub_resource type="Animation" id=10]
+resource_name = "START"
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.0352941, 0, 0.0666667, 0 ), Color( 0.0352941, 0, 0.0666667, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CanvasLayer/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "pause_fade_out"
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.0352941, 0, 0.0666667, 0 ), Color( 0.0352941, 0, 0.0666667, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CanvasLayer/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("PauseOverlay:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="PauseUI" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -1.0
+margin_bottom = -1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+main_menu = "res://scenes/UserInterface/Main Menu.tscn"
+
+[node name="PauseOverlay" type="ColorRect" parent="."]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -1.902
+margin_bottom = -1.90201
+color = Color( 0.0352941, 0, 0.0666667, 0.392157 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" parent="PauseOverlay" instance=ExtResource( 3 )]
+anchor_top = 0.263
+anchor_bottom = 0.263
+margin_top = 0.0
+
+[node name="PauseMenu" type="VBoxContainer" parent="PauseOverlay"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -34.5
+margin_top = -9.99999
+margin_right = 34.5
+margin_bottom = 88.0
+custom_constants/separation = 8
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resume" type="Button" parent="PauseOverlay/PauseMenu"]
+margin_right = 69.0
+margin_bottom = 17.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color_disabled = Color( 0.513726, 0.513726, 0.513726, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.901961, 0.894118, 0.34902, 1 )
+custom_colors/font_color_pressed = Color( 0.831373, 0.768627, 0.0980392, 1 )
+text = "Resume"
+flat = true
+
+[node name="Restart" parent="PauseOverlay/PauseMenu" instance=ExtResource( 4 )]
+margin_top = 25.0
+margin_right = 69.0
+margin_bottom = 42.0
+
+[node name="MainMenu" type="Button" parent="PauseOverlay/PauseMenu"]
+margin_top = 50.0
+margin_right = 69.0
+margin_bottom = 67.0
+focus_neighbour_top = NodePath("../Exit")
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 7 )
+custom_styles/focus = SubResource( 8 )
+custom_styles/normal = SubResource( 9 )
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color_disabled = Color( 0.513726, 0.513726, 0.513726, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.901961, 0.894118, 0.34902, 1 )
+custom_colors/font_color_pressed = Color( 0.831373, 0.768627, 0.0980392, 1 )
+custom_constants/hseparation = 0
+shortcut_in_tooltip = false
+text = "Main Menu"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" parent="PauseOverlay/PauseMenu" instance=ExtResource( 1 )]
+margin_top = 75.0
+margin_right = 69.0
+margin_bottom = 98.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0352941, 0, 0.0666667, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/START = SubResource( 10 )
+anims/pause_fade_out = SubResource( 11 )
+[connection signal="button_up" from="PauseOverlay/PauseMenu/Resume" to="." method="_on_Resume_button_up"]
+[connection signal="button_up" from="PauseOverlay/PauseMenu/MainMenu" to="." method="_on_MainMenu_button_up"]

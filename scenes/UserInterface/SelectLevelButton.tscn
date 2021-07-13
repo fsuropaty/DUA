@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/Fonts/m6x11.tres" type="DynamicFont" id=1]
+[ext_resource path="res://scenes/UserInterface/SelectLevelButton.gd" type="Script" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[node name="Select Level" type="Button"]
+margin_top = 21.0
+margin_right = 95.0
+margin_bottom = 38.0
+focus_neighbour_top = NodePath("../Exit")
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color_disabled = Color( 0.513726, 0.513726, 0.513726, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.901961, 0.894118, 0.34902, 1 )
+custom_colors/font_color_pressed = Color( 0.831373, 0.768627, 0.0980392, 1 )
+custom_constants/hseparation = 0
+shortcut_in_tooltip = false
+text = "Select Level"
+flat = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_up" from="." to="." method="_on_Select_Level_button_up"]
