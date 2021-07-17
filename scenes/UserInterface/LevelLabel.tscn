@@ -2,16 +2,12 @@
 
 [ext_resource path="res://assets/Fonts/m6x11.tres" type="DynamicFont" id=1]
 
-[node name="Label" type="Label"]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -47.5
-margin_top = 80.0
-margin_right = 47.5
-margin_bottom = 17.0
+[node name="LevelLabel" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
 custom_fonts/font = ExtResource( 1 )
-align = 1
-valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }

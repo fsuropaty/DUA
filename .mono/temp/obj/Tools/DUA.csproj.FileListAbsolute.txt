@@ -1,0 +1,5 @@
+F:\F\College\Assignment\Sem VI\TeknoGame\New DUA\.mono\temp\bin\Tools\DUA.dll
+F:\F\College\Assignment\Sem VI\TeknoGame\New DUA\.mono\temp\bin\Tools\DUA.pdb
+F:\F\College\Assignment\Sem VI\TeknoGame\New DUA\.mono\temp\obj\Tools\DUA.csprojAssemblyReference.cache
+F:\F\College\Assignment\Sem VI\TeknoGame\New DUA\.mono\temp\obj\Tools\DUA.dll
+F:\F\College\Assignment\Sem VI\TeknoGame\New DUA\.mono\temp\obj\Tools\DUA.pdb

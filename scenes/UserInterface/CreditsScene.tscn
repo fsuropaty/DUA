@@ -1,10 +1,9 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/Backgrounds/MainmenuBG.png" type="Texture" id=1]
 [ext_resource path="res://assets/Fonts/m5x7.tres" type="DynamicFont" id=2]
 [ext_resource path="res://assets/Fonts/m6x11.tres" type="DynamicFont" id=3]
 [ext_resource path="res://scenes/UserInterface/SceneChangeButton.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/UserInterface/SceneChangeButton.gd" type="Script" id=5]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -33,37 +32,43 @@ custom_fonts/normal_font = ExtResource( 2 )
 bbcode_enabled = true
 bbcode_text = "[center]A game by SauceHunter
 
+[b] Programmer [/b]
 Muh. Fauzy Ramadhany Suropaty
 Rizki Kurnia Firmansyah
-Arya Yudistira
-Muhamad Syahreza
 Tegar Nusantara
 
-bla
-bla
-bla
-bla
-"
+[b] Art [/b]
+Muh. Fauzy Ramadhany Suropaty
+
+[b]Level Designer[/b]
+Muhamad Syahreza
+Muh. Fauzy Ramadhany Suropaty
+
+[b]BGM and Sound Effect[/b]
+-"
 text = "A game by SauceHunter
 
+ Programmer 
 Muh. Fauzy Ramadhany Suropaty
 Rizki Kurnia Firmansyah
-Arya Yudistira
-Muhamad Syahreza
 Tegar Nusantara
 
-bla
-bla
-bla
-bla
-"
+ Art 
+Muh. Fauzy Ramadhany Suropaty
+
+Level Designer
+Muhamad Syahreza
+Muh. Fauzy Ramadhany Suropaty
+
+BGM and Sound Effect
+-"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
-[node name="Back" type="Button" parent="." instance=ExtResource( 4 )]
+[node name="Back" parent="." instance=ExtResource( 4 )]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -72,24 +77,9 @@ margin_left = 224.0
 margin_top = 220.0
 margin_right = 256.0
 margin_bottom = 237.0
-focus_neighbour_top = NodePath("../Exit")
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
 custom_styles/focus = SubResource( 3 )
 custom_styles/normal = SubResource( 4 )
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color_disabled = Color( 0.513726, 0.513726, 0.513726, 1 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_colors/font_color_hover = Color( 0.901961, 0.894118, 0.34902, 1 )
-custom_colors/font_color_pressed = Color( 0.831373, 0.768627, 0.0980392, 1 )
-custom_constants/hseparation = 0
-shortcut_in_tooltip = false
 text = "Back"
-flat = true
-script = ExtResource( 5 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 start_scene = "res://scenes/UserInterface/Main Menu.tscn"
-
-[connection signal="button_up" from="Back" to="Back" method="_on_ChangeScene_button_up"]

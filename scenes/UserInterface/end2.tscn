@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/Fonts/m5x7.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/Backgrounds/MainmenuBG.png" type="Texture" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 240, 135 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="ParallaxBackground/Sprite"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -398.0
+margin_top = -173.5
+margin_right = -82.0
+margin_bottom = -96.5
+custom_fonts/font = ExtResource( 1 )
+text = "Congratulation! You found this scene, now you are trapped 
+with us forever, 
+hehe hehe heheheheHEHEHEHEHEHEHEHEHE
+
+- SauceHunter -"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

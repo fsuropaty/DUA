@@ -1451,5 +1451,4 @@ pause_mode = 2
 [node name="PauseUI" parent="PauseUI" instance=ExtResource( 5 )]
 visible = false
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="." instance=ExtResource( 7 )]
-scroll_ignore_camera_zoom = true
+[node name="ParallaxBackground" parent="." instance=ExtResource( 7 )]

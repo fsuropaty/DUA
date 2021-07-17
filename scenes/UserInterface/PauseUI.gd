@@ -6,6 +6,7 @@ onready var anim_player: AnimationPlayer = $AnimationPlayer
 
 func _ready() -> void:
 	get_tree().paused = false
+	
 
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_released("pause"):
