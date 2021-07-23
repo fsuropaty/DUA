@@ -13,8 +13,10 @@ func _get_configuration_warning() -> String:
 	
 func move_scene() -> void:
 	if get_overlapping_bodies().size() > 1:
+		AudioManager.play_sfxPortal()
 		anim_player.play("fade_out")
 		yield(anim_player, "animation_finished")
+# warning-ignore:return_value_discarded
 		get_tree().change_scene_to(next_scene)
 		#Global.switch_scene("res://scence/level/level2.tscn")
 

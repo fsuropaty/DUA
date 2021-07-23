@@ -5,7 +5,7 @@
 [ext_resource path="res://scripts/Player2.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/tilesets/12px tileset.png" type="Texture" id=4]
 [ext_resource path="res://scenes/UserInterface/PauseUI.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scripts/Background1.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scripts/Background2.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/Levels/Level7.tscn" type="PackedScene" id=7]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
@@ -1571,4 +1571,4 @@ pause_mode = 2
 [node name="PauseUI" parent="PauseUI" instance=ExtResource( 5 )]
 visible = false
 
-[node name="ParallaxBackground" parent="." instance=ExtResource( 6 )]
+[node name="Background1" parent="." instance=ExtResource( 6 )]

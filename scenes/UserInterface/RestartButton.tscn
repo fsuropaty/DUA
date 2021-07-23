@@ -96,6 +96,9 @@ color = Color( 0.0352941, 0, 0.0666667, 0 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Fade_out = SubResource( 5 )
 anims/START = SubResource( 6 )
+
 [connection signal="button_up" from="." to="." method="_on_Restart_button_up"]
+[connection signal="focus_entered" from="." to="." method="_on_Restart_focus_entered"]
+[connection signal="mouse_entered" from="." to="." method="_on_Restart_mouse_entered"]
 
 [editable path="Transition"]

@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/Fonts/m5x7.tres" type="DynamicFont" id=1]
 [ext_resource path="res://assets/Backgrounds/MainmenuBG.png" type="Texture" id=2]
+[ext_resource path="res://scenes/UserInterface/end2.gd" type="Script" id=3]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -25,7 +27,7 @@ text = "Congratulation! You found this scene, now you are trapped
 with us forever, 
 hehe hehe heheheheHEHEHEHEHEHEHEHEHE
 
-- SauceHunter -"
+- Sussyety -"
 align = 1
 valign = 1
 __meta__ = {

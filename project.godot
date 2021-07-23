@@ -45,8 +45,10 @@ _global_script_class_icons={
 [application]
 
 config/name="DUA"
+config/description="A Short Platformer Game"
 run/main_scene="res://scenes/UserInterface/Main Menu.tscn"
-config/icon="res://icon.png"
+config/icon="res://assets/Backgrounds/DUA logo.png"
+config/windows_native_icon="res://DUA logo.ico"
 
 [autoload]
 

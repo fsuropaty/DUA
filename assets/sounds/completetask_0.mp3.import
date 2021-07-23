@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/completetask_0.mp3-e8a1fc8772aa3cfc431424c1fe821720.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/completetask_0.mp3"
+dest_files=[ "res://.import/completetask_0.mp3-e8a1fc8772aa3cfc431424c1fe821720.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

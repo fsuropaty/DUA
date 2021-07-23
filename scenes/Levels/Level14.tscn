@@ -1,0 +1,32 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scripts/Portal.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scripts/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scripts/Player2.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/UserInterface/TileMap.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/UserInterface/PauseUI.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scripts/Background3.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/UserInterface/EndScene.tscn" type="PackedScene" id=7]
+
+[node name="Level14" type="Node2D"]
+
+[node name="Portal" parent="." instance=ExtResource( 1 )]
+position = Vector2( 246, 79 )
+next_scene = ExtResource( 7 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 30, 37 )
+
+[node name="Player2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 450, 71 )
+
+[node name="TileMap" parent="." instance=ExtResource( 4 )]
+
+[node name="PauseUI" type="CanvasLayer" parent="."]
+pause_mode = 2
+
+[node name="PauseUI" parent="PauseUI" instance=ExtResource( 5 )]
+visible = false
+
+[node name="Background3" type="ParallaxBackground" parent="." instance=ExtResource( 6 )]
+scroll_ignore_camera_zoom = true

@@ -29,4 +29,7 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="button_up" from="." to="." method="_on_Exit_button_up"]
+[connection signal="focus_entered" from="." to="." method="_on_Exit_focus_entered"]
+[connection signal="mouse_entered" from="." to="." method="_on_Exit_mouse_entered"]

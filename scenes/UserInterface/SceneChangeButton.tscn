@@ -98,5 +98,7 @@ anims/Fade_out = SubResource( 5 )
 anims/START = SubResource( 6 )
 
 [connection signal="button_up" from="." to="." method="_on_ChangeScene_button_up"]
+[connection signal="focus_entered" from="." to="." method="_on_ChangeScene_focus_entered"]
+[connection signal="mouse_entered" from="." to="." method="_on_ChangeScene_mouse_entered"]
 
 [editable path="Transition"]

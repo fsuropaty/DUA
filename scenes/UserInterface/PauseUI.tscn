@@ -1,6 +1,5 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://scenes/UserInterface/ExitButton.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/UserInterface/Title.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/UserInterface/RestartButton.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/UserInterface/PauseUI.gd" type="Script" id=5]
@@ -104,11 +103,15 @@ main_menu = "res://scenes/UserInterface/Main Menu.tscn"
 
 [node name="PauseOverlay" type="ColorRect" parent="."]
 pause_mode = 2
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = -1.902
-margin_bottom = -1.90201
-color = Color( 0.0352941, 0, 0.0666667, 0.392157 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -120.0
+margin_top = -120.0
+margin_right = 120.0
+margin_bottom = 120.0
+color = Color( 0.0352941, 0, 0.0666667, 0.54902 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -128,9 +131,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -34.5
-margin_top = -9.99999
+margin_top = 15.0
 margin_right = 34.5
-margin_bottom = 88.0
+margin_bottom = 113.0
 custom_constants/separation = 8
 __meta__ = {
 "_edit_use_anchors_": false
@@ -179,11 +182,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Exit" parent="PauseOverlay/PauseMenu" instance=ExtResource( 1 )]
-margin_top = 57.0
-margin_right = 69.0
-margin_bottom = 74.0
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
@@ -200,4 +198,8 @@ anims/START = SubResource( 10 )
 anims/pause_fade_out = SubResource( 11 )
 
 [connection signal="button_up" from="PauseOverlay/PauseMenu/Resume" to="." method="_on_Resume_button_up"]
+[connection signal="focus_entered" from="PauseOverlay/PauseMenu/Resume" to="." method="_on_Resume_focus_entered"]
+[connection signal="mouse_entered" from="PauseOverlay/PauseMenu/Resume" to="." method="_on_Resume_mouse_entered"]
 [connection signal="button_up" from="PauseOverlay/PauseMenu/MainMenu" to="." method="_on_MainMenu_button_up"]
+[connection signal="focus_entered" from="PauseOverlay/PauseMenu/MainMenu" to="." method="_on_MainMenu_focus_entered"]
+[connection signal="mouse_entered" from="PauseOverlay/PauseMenu/MainMenu" to="." method="_on_MainMenu_mouse_entered"]

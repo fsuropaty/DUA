@@ -30,7 +30,7 @@ rect_clip_content = false
 custom_fonts/bold_font = ExtResource( 3 )
 custom_fonts/normal_font = ExtResource( 2 )
 bbcode_enabled = true
-bbcode_text = "[center]A game by SauceHunter
+bbcode_text = "[center]A game by Sussyety
 
 [b] Programmer [/b]
 Muh. Fauzy Ramadhany Suropaty
@@ -43,10 +43,17 @@ Muh. Fauzy Ramadhany Suropaty
 [b]Level Designer[/b]
 Muhamad Syahreza
 Muh. Fauzy Ramadhany Suropaty
+Arya Yudistira
 
-[b]BGM and Sound Effect[/b]
--"
-text = "A game by SauceHunter
+[b]BGM[/b]
+Tegar Nusantara
+
+[b]Thanks to [/b]
+HeartBeast
+GDQuest
+OpenGamArt.org
+Rafa Fiedo"
+text = "A game by Sussyety
 
  Programmer 
 Muh. Fauzy Ramadhany Suropaty
@@ -59,9 +66,16 @@ Muh. Fauzy Ramadhany Suropaty
 Level Designer
 Muhamad Syahreza
 Muh. Fauzy Ramadhany Suropaty
+Arya Yudistira
 
-BGM and Sound Effect
--"
+BGM
+Tegar Nusantara
+
+Thanks to 
+HeartBeast
+GDQuest
+OpenGamArt.org
+Rafa Fiedo"
 __meta__ = {
 "_edit_use_anchors_": false
 }

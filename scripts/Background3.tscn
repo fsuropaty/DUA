@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/Backgrounds/Background3.png" type="Texture" id=1]
+
+[node name="Background3" type="ParallaxBackground"]
+scroll_ignore_camera_zoom = true
+
+[node name="Background3" type="Sprite" parent="."]
+position = Vector2( 240, 136 )
+texture = ExtResource( 1 )

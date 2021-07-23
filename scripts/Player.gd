@@ -29,11 +29,11 @@ func _physics_process(delta):
 			motion.x = lerp(motion.x, 0, FRICTION)
 			
 		if Input.is_action_just_pressed("ui_up"):
+			AudioManager.play_sfxJump()
 			motion.y = -JUMP_FORCE
 	else:
 		_animated_sprite.play("jump")
-
-# warning-ignore:integer_division
+		
 		if Input.is_action_just_released("ui_up") and motion.y < -JUMP_FORCE/2:
 # warning-ignore:integer_division
 			motion.y = -JUMP_FORCE/2

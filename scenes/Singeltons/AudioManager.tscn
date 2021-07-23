@@ -2,16 +2,18 @@
 
 [ext_resource path="res://scenes/Singeltons/AudioManager.gd" type="Script" id=2]
 
-
 [node name="AudioManager" type="Node"]
 script = ExtResource( 2 )
 
-[node name="sfx" type="Node" parent="."]
+[node name="sfx_hover" type="AudioStreamPlayer" parent="."]
 
-[node name="sfx_select" type="AudioStreamPlayer" parent="sfx"]
+[node name="sfx_portal" type="AudioStreamPlayer" parent="."]
 
-[node name="sfx_hover" type="AudioStreamPlayer" parent="sfx"]
+[node name="sfx_jump" type="AudioStreamPlayer" parent="."]
 
-[node name="bgm" type="Node" parent="."]
+[node name="bgm" type="AudioStreamPlayer" parent="."]
+volume_db = -35.0
 
-[node name="bgm" type="AudioStreamPlayer" parent="bgm"]
+[node name="sfx_select" type="AudioStreamPlayer" parent="."]
+
+[node name="bgm2" type="AudioStreamPlayer" parent="."]
